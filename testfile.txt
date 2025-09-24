@@ -1,0 +1,3 @@
+./foo.sh > bar.txt
+then sort < file.txt > baz.txt
+else sort < file.txt
