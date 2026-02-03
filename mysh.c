@@ -381,13 +381,14 @@ void change_stdin(char *infile) {
 }
 
 int main(int argc, char **argv) {
-
+    //Checks proper usage
     if (argc == 2) change_stdin(argv[1]);
     else if (argc != 1) {
         fprintf(stderr, "usage - expected ./mysh OR ./mysh <filename>\n");
         exit(EXIT_FAILURE);
     }
 
+    //
     saved_stdout = dup(1);
 
     prev_process_exit_status = -1;
